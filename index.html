@@ -1,0 +1,3013 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 4</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        .secao1 li{
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+                /* Ajusta a posição da fonte da imagem */
+        .fonte-quadrov {
+            font-size: 13px !important;
+            font-style: italic;
+            color: #555;
+            margin-top: 0 !important;  /* Remove qualquer margem superior extra */
+            margin-bottom: 0 !important;  /* Remove margem inferior */
+            padding: 0 !important;
+            display: inline-block !important; /* Evita que o elemento expanda ocupando toda a largura */
+            width: 100% !important; /* Mantém o tamanho do conteúdo */ 
+            max-width: 700px !important;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+        /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        .text-green{
+            color: #015A42;
+        }
+        .text-greenv{
+            color: #015A42;
+            font-weight: bold;
+        }
+        .text-red{
+            color: red;
+            font-weight: bold;
+        }
+        .text-blue{
+            color: rgb(0, 132, 255);
+            font-weight: bold;
+        }
+        .text-italicf {
+            font-style: italic; /* Transforma o texto em itálico */
+            font-size: 13px;
+        }
+        .text-orange{
+            color: rgb(226, 155, 1);
+            font-weight: bold;
+        }
+        .fonte-acordeon{
+            font-size: 12px !important;
+            color: #555;
+        }
+        .tabs-container {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        .tabs-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Espaçamento entre as abas */
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            background: #9F43BE; /* Cor individual para cada aba */
+            border-radius: 8px; /* Borda arredondada */
+            transition: background 0.3s, transform 0.2s;
+        }
+        .tab-button:hover {
+            background: #8739A6; /* Tom mais escuro ao passar o mouse */
+            transform: scale(1.05);
+        }
+         .tab-button.active {
+            background: #752B8A;
+        }
+
+        .tabs-content {
+            background: white;
+            border: 2px solid #9F43BE;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; /* Inicialmente oculto */
+            margin-top: 10px;
+        }
+
+        .tab-content {
+            display: none;
+            text-align: center;
+        }
+
+        .tab-content img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 15px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify !important;
+        }
+        
+        .fonte-imagem{
+            font-size: 12px !important;
+            color: #555;
+            font-style: italic;
+        }
+        .fonte-small{
+            font-size: 12px !important;
+            color: #555;
+        }
+        .small-frame {
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            width: 80%; /* Usa um tamanho mais fluido */
+            max-width: 700px;
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frame p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8; /* Maior espaçamento entre linhas */
+            text-align: justify;
+            margin: 20px auto;
+        }
+        .small-frame h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frame p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frame p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px auto;
+        }
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .text-right {
+            display: inline-block; /* Evita que a span force um bloco separado */
+            text-align: right;
+            width: auto;
+        }
+        .text-italic {
+            font-style: italic; /* Transforma o texto em itálico */
+        }
+        
+        .text-under{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+         /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #015A42;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-contentv {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #015A42;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .acordeon-contentv p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+            
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerv.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+        
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin: 20px auto;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+                /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 50px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Container principal */
+        .container-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #015A42; /* Borda verde */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 700px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-box p {
+            margin: 0; /* Remove a margem herdada */
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+        /* Layout da imagem + texto */
+        .content {
+            display: flex;
+            align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre os elementos */
+        }
+            /* Garantir que a fonte fique abaixo da imagem */
+        .imagem-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a imagem e a fonte */
+        }
+
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            text-align: center;
+            margin-top: 5px; /* Pequeno espaçamento entre a imagem e a fonte */
+            display: block;
+        }
+    
+        /* Imagem */
+        .content img {
+            width: 350px; /* Ajuste do tamanho da imagem */
+            height: auto;
+            border-radius: 5px; /* Pequeno arredondamento */
+            object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+        }
+
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify;
+            height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+        }
+
+        /* Descrição abaixo da imagem */
+        .description {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+            margin-top: 10px !important;
+            text-align: justify !important; /* Melhor alinhamento */
+        }
+
+        /* 🔹 Responsividade 🔹 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column !important; /* Empilha imagem e texto */
+                align-items: center;
+                text-align: center !important;
+            }
+
+            .container-box {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+
+            .content img {
+                width: 90% !important; /* Imagem mais responsiva */
+                max-width: 300px !important; /* Limite de tamanho */
+                margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+            }
+
+            .textimg {
+                font-size: 14px !important; /* Texto reduzido */
+                text-align: justify !important; /* Melhor leitura */
+                display: block; /* Garante que o texto fique bem distribuído */
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .container-box {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+        }
+        /* Contêiner dos flip cards */
+        .flip-card-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os cards */
+            justify-content: center;
+            margin: 20px auto;
+            padding-bottom: 20px; /* Garante que o espaçamento inferior seja visível */
+        }
+
+        /* Estilo geral do flip card */
+        .flip-card {
+            width: 180px;
+            height: 180px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        /* Parte interna do flip card */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-front {
+            background: linear-gradient(135deg, #015A42, #02785D);
+            color: white;
+    
+        }
+
+        /* Face de trás */
+        .flip-card-back {
+            background-color: white;
+            color: #444;
+            transform: rotateY(180deg);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+       @media (max-width: 768px) {
+        .flip-card-containerg {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .flip-cardg {
+            width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
+            max-width: 160px; /* Mantém um limite de tamanho */
+            margin: 5px;
+        }
+        .flip-card-frontg,
+        .flip-card-backg {
+            font-size: 12px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .flip-card-container {
+            flex-wrap: wrap; /* Permite que os cards quebrem linha */
+            justify-content: center; /* Centraliza os itens */
+            gap: 15px; /* Aumenta o espaçamento entre os cards */
+        }
+
+        .flip-card {
+            width: 150px; /* Reduz a largura do card */
+            height: 160px; /* Reduz a altura do card */
+            margin: 5px; /* Ajusta as margens */
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            font-size: 11px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+            
+        }
+    }
+    /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            text-align: center;
+        }
+                /* Para o texto do slide não quebrar estranho */
+        .slide > strong, 
+        .slide > span {
+            display: inline; /* garante inline, inclusive o strong */
+            white-space: normal;
+        }
+        .slide strong {
+            font-weight: bold;
+            white-space: normal; /* Permite que o número não quebre */
+        }
+        .slide-texto {
+            display: inline-block; /* agora vira um bloco centrado */
+            max-width: 90%;
+            line-height: 1.5;
+            font-size: 18px;
+            text-align: left; /* texto alinha à esquerda, mas o bloco fica centralizado */
+        }
+                /* Responsivo */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 25px 20px;
+            }
+            .slide-texto {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 15px;
+            }
+            .slide-texto {
+                font-size: 15px;
+            }
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9F43BE; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #7c34a1; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#secao5">Tópico 5</a></li>
+            <li><a href="#secao6">Tópico 6</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 4 | A PRODUÇÃO DE RESENHA ACADÊMICA</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>
+                    A produção de resenhas acadêmicas desempenha um papel crucial na formação intelectual e crítica
+                    dos estudantes universitários. Esse gênero textual vai além da simples descrição, exigindo uma análise
+                    minuciosa e um julgamento fundamentado sobre as obras analisadas. A prática da resenha acadêmica
+                    promove o desenvolvimento de habilidades como síntese, argumentação e avaliação crítica, sendo uma
+                    atividade indispensável no contexto acadêmico.
+                </p>
+                <p>
+                    Nesta unidade, você terá acesso a orientações detalhadas sobre como estruturar uma resenha acadêmica,
+                    abordando suas características, etapas de produção e linguagem adequada. Ao aplicar os conceitos
+                    estudados, será possível aprimorar sua capacidade de interpretação e expressão escrita, habilidades
+                    essenciais para o sucesso acadêmico e profissional.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            1. OS GÊNEROS TEXTUAIS
+        </h1>
+        <p>
+            Antes de iniciarmos o estudo sobre a produção de uma resenha acadêmica, faz-se necessário lembrar e
+            acrescentar algumas explicações a mais a respeito de gêneros textuais.
+        </p>
+        <h1>
+            1.1 ESFERA DE CIRCULAÇÃO OU COMUNICAÇÃO
+        </h1>
+        <p>
+            Os gêneros textuais geralmente são ligados às <strong>esferas de circulação e seus respectivos tipos</strong>. Elas
+            podem também ser chamadas de ESFERAS SOCIAIS DE CIRCULAÇÃO OU COMUNICAÇÃO, pois
+            toda atividade humana se entrelaça de discursos – exposição metódica sobre certo assunto. Elas são
+            organizadas em produção, circulação, recepção dos textos em gêneros de discurso específicos em nossa
+            sociedade. Leandro Konder (2003), em seu texto “A Dialética e o Marxismo” define as práticas sociais
+            como a “atividade do sujeito que de algum modo aproveita algum conhecimento ao inferir no mundo,
+            transformando-o e se transformando a si mesmo”.
+        </p>
+        <p>
+            Ao circularem socialmente, os textos são produzidos como práticas de linguagem, assumindo configurações
+            específicas, formais e de conteúdo. Verifique no quadro abaixo alguns exemplos.
+        </p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Quadro 1.</span> Esferas de circulação</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742995317/uircguvrqoeqq68lzgkl.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+        </div>
+        <!-- Fonte da imagem -->
+        <p class="fonte-quadrov">
+            <strong>Fonte:</strong> PARANÁ. Secretaria de Estado da Educação. Diretrizes Curriculares de Língua Portuguesa para
+            a Educação Básica. Curitiba, 2009.
+        </p>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+        <p>
+            Acesse os botões abaixo, e navegue por três exemplos de gêneros textuais diferentes que abordam a
+            mesma temática: o amor.
+        </p>
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-button" data-tab="tab1">TEXTO 1</button>
+                <button class="tab-button" data-tab="tab2">TEXTO 2</button>
+                <button class="tab-button" data-tab="tab3">TEXTO 3</button>
+            </div>
+            <div class="tabs-content">
+                <div id="tab1" class="tab-content">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743086516/yqojwtnh770rnytimax8.jpg" alt="Imagem 1">
+                    <p class="fonte-imagem">
+                        <strong>Fonte:</strong> Adaptado de: https://blogdoenem.com.br/generos-textuais/
+                    </p>
+                    <p class="textimg">
+                        <strong>Descrição da imagem:</strong> A imagem é uma propaganda do tempero Sazon, da marca Ajinomoto. O slogan
+                        principal diz:<br><br>
+                        “Amor pra dar e vender. No seu caso, pra vender, e muito.” A imagem apresenta três embalagens do
+                        Sazon em diferentes cores, que representam os diferentes sabores e tipos do tempero. O fundo vermelho
+                        aquece a comunicação e reforça a ideia de sabor e paixão pela culinária.
+                    </p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <p class="textimg"><strong>a.mor</strong>: sm 1. Afeição acentuada de uma pessoa por outra; 2. Objeto de afeição; 3. […] pessoa amada; 4. Zelo, cuidado.
+                    <br><br>
+                    (Soares Amora. Minidicionário. 18ed. São Paulo: Saraiva, 2008, p.38)
+                    </p>
+                    <p class="fonte-imagem">
+                        <strong>Fonte:</strong> Adaptado de: https://blogdoenem.com.br/generos-textuais/
+                    </p>
+                    
+                </div>
+                <div id="tab3" class="tab-content">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743088102/aydyieex4xmjqshhn19b.png" alt="Imagem 3">
+                    <p class="fonte-imagem">
+                        <strong>Fonte:</strong> Adaptado de: https://blogdoenem.com.br/generos-textuais/
+                    </p>
+                    <p class="textimg">
+                        <strong>Descrição da imagem:</strong> A imagem é uma charge sobre o Dia Internacional da Mulher. No topo esquerdo, há um título em destaque: "Dia
+                        Internacional da Mulher... ou de quem realmente manda!!" A cena apresenta um homem de bigode, à esquerda, usando
+                        camiseta vermelha e calça escura, segura um cesto de roupas e olha para uma máquina de lavar com expressão cansada.
+                        Acima dele, um balão de pensamento diz "Chega meia-noite!". Ao seu redor, há uma pilha de roupas dobradas sobre a
+                        máquina e um cesto cheio de roupas para lavar. À direita, uma mulher de pijama rosa, sorridente, segura uma longa lista
+                        de tarefas e diz: "Depois tem: louça, passar a roupa, almoço, mercado, limpar a casa, jantar fora, cineminha...".
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Você consegue perceber que os três textos apresentam estrutura e intenção diferentes entre si, embora
+            tratem do mesmo assunto. Dessa forma também os três textos são veiculados de maneiras diferentes.
+        </p>
+        <p>
+            O <strong>texto 1</strong> pertence ao <strong>gênero anúncio publicitário</strong>. Utiliza-se, portanto, da linguagem apelativa, e você
+            poderá encontrá-lo em uma revista, por exemplo. O <strong>texto 2</strong> pertence ao <strong>gênero verbete</strong>, utiliza-se da
+            linguagem metalinguística, e você o encontra sobretudo nos dicionários. O <strong>texto 3</strong> é uma <strong>charge</strong> que
+            está se utilizando da linguagem poética, e você vai encontrá-lo nos jornais e revistas.
+        </p>
+        <p>
+            Vamos verificar um outro exemplo.
+        </p>
+        <div class="small-frame">
+            <p>
+                <span class="text-italic">MOSTRE QUE A SUA MEMÓRIA É MELHOR DO QUE A DE COMPUTADOR E GUARDE ESTA
+                CONDIÇÃO: 12X SEM JUROS.</span>
+            </p>
+            <p><span class="fonte-small">
+                Campanha publicitária de loja de eletrodomésticos. Revista Época, n. 424, 3 jul. 2006.
+            </span></p>
+        </div>
+        <h1>
+            1.2 CONDIÇÕES DE PRODUÇÃO
+        </h1>
+        <p>
+            Geralmente, o contexto de produção de um texto é essencial para determinar suas características textuais
+            e linguísticas. O produtor do texto necessita atender, para identificá-lo, <strong>quem o produz, para quem, com
+            qual objetivo e em que contexto</strong>. Essas condições, porém, não são rígidas, costumam variar bastante
+            nos contextos de produção.
+        </p>
+        <p>
+            Tanto a <strong>Esfera de Circulação ou Comunicação</strong> como <strong>as Condições de Produção</strong> são características
+            <span class="text-under">também</span> do gênero <strong>RESENHA.</strong>
+        </p>
+        <p>
+            Verifique dois exemplos de resenha acessando os botões a seguir.
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Resenha do Livro – “A REVOLUÇÃO DOS BICHOS” por Luís de Oliveira Mesquita
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+        
+                <div class="acordeon-content">
+                    <p>
+                        A <strong>Revolução dos Bichos</strong>, escrito por <strong>George Orwell</strong>, escritor inglês, publicado no Reino
+                        Unido em 17 de agosto de 1945 e apontado pela revista americana TIME entre os cem
+                        melhores da língua inglesa é um romance satírico, sátira feita à <strong>União Soviética comunista</strong>,
+                        naquele tempo.
+                    </p>
+                    <p>
+                        Na cidade de <strong>Willingdon</strong> (Inglaterra) havia um local chamado de <strong>Granja do Solar</strong> e lá viviam
+                        os bichos. O <strong>Sr. Jones</strong> era o dono da Granja e, como tal, explorava o trabalho animal em
+                        benefício próprio, para acumular capital. Em troca dos serviços prestados, ele pagava com
+                        a alimentação, que nem sempre era boa e suficiente. Temos aí o retrato de uma sociedade
+                        capitalista: quem mais trabalha é quem menos ganha.
+                    </p>
+                    <p>
+                        Um dos animais chamado <strong>Bola-de-Neve</strong> e – <strong>O Velho Major</strong> (porco) para os bichos – teve
+                        um sonho, sobre uma revolução em que os bichos seriam autossuficientes e todos iguais.
+                        Era o princípio do <strong>Animalismo</strong>. E, ele iniciou uma revolução e expulsou o Sr. Jones da
+                        Granja.
+                    </p>
+                    <p>
+                        Depois da Revolução, a Granja passou a se chamar <strong>Granja dos Bichos</strong>, e quem a
+                        administrava era <strong>Bola-de-Neve</strong> (porco). Bola-de-Neve seguia os princípios do Animalismo,
+                        e mesmo sendo superior (em quesitos de inteligência e cultura) em relação aos outros
+                        animais, sempre se considerou igual a todos, não tendo privilégios devido à sua condição.
+                        Ele escreveu os <strong>SETE MANDAMENTOS DO ANIMALISMO</strong> que eram:
+                    </p>
+                    <p>
+                        (1) Qualquer coisa que ande sobre duas pernas é inimigo. (2) Qualquer coisa que ande
+                        sobre quatro pernas, ou tenha asas, é amigo, (3) Nenhum animal usará roupas. (4) Nenhum
+                        animal dormirá em cama. (5) Nenhum animal beberá álcool. (6) Nenhum animal matará
+                        outro animal. (7) Todos os animais são iguais.
+                    </p>
+                    <p>
+                        Após sua morte, os animais colocaram em prática a ideia do líder, fazendo a <strong>Revolução
+                        dos Bichos. Bola-de-Neve</strong> tinha um assistente, <strong>Napoleão</strong> (porco), que na ânsia pelo
+                        poder, traiu os pensamentos do amigo, assumindo a administração da Granja. <strong>Napoleão</strong>
+                        mostrou-se competente e justo no começo, mas depois passou, aos poucos, a alterar e
+                        desrespeitar todos os mandamentos.
+                    </p>
+                    <p>
+                        Após alguns anos, <strong>Napoleão</strong> já ocupava a casa do <strong>Sr. Jones</strong>, bebia álcool, vestia as
+                        roupas do ex-dono, andava somente sobre duas pernas e convivia com seres humanos,
+                        enfim agia em benefício próprio, instalando um regime ditatorial, dominando e hostilizando
+                        os demais animais, considerados seres inferiores e sem direitos. Por essa época, já não
+                        era possível distinguir, quando reunidos à mesa, o porco tirano e os homens com quem
+                        se confraternizava. <strong>Napoleão</strong> conseguiu sair vitorioso graças à ajuda de <strong>Garganta</strong>, porco
+                        servil e obediente e que, através de bons argumentos, convencia os animais de que tudo o
+                        que acontecia era para o bem deles.
+                    </p>
+                    <p>
+                        A <strong>Revolução dos Bichos</strong> é um livro de extrema importância para entendermos o
+                        funcionamento de sociedades comandadas por diferentes tipos de governo, além de mostrar
+                        de forma genial a ambição do ser humano, o “sonho do poder”.
+                    </p>
+                    <p>
+                        A Revolução que se deu por ideia do “<strong>Velho Major</strong>”, tinha por princípio básico a igualdade; sendo
+                        assim, o <strong>Animalismo</strong> corresponde ao <strong>Socialismo</strong>, regime em que não existe propriedade
+                        privada e em que todos são iguais, e todos trabalham para o bem-comum.
+                    </p>
+                    <p>
+                        A princípio, houve um socialismo democrático, em que todos participavam de assembleias,
+                        dando ideias e sugestões, liderados por <strong>Bola-de-Neve</strong>, bem aceito pelos animais em geral.
+                        <strong>Napoleão</strong> representa o desejo da onipotência, do poder absoluto e, para conseguir seus
+                        objetivos, tudo passa a ser válido: mentiras, traições, mudanças de regras.
+                    </p>
+                    <p>
+                        Tempos depois instaurava-se na Granja uma verdadeira Ditadura, o regime em que não há
+                        liberdade de expressão, direito a opiniões etc. Na sede pelo poder e pela riqueza, Napoleão
+                        entra em contato com os homens para com eles negociar, comprar, vender, enfim, acumular
+                        riquezas e tudo graças ao trabalho dos animais, verdadeiros empregados mal remunerados,
+                        ajudando o “patrão” a ter regalias, bens materiais, capital.
+                    </p>
+                    <p>
+                        A situação fica mais crítica do que quando <strong>Jones</strong> era o dono da Granja porque, mais do
+                        que nunca, os direitos humanos, ou seja, dos animais foram violados de forma cruel e tendo
+                        consequências gravíssimas como a morte de alguns, o desaparecimento de outros e muita
+                        tortura.
+                    </p>
+                    <p>
+                        Com base nos fatos ocorridos, pode-se concluir que a história nos mostra os dois tipos de
+                        dominação existentes – a dominação pela sedução: <strong>Garganta</strong> persuadia os animais com
+                        seus argumentos convincentes e eles aceitavam pacificamente as mudanças efetuadas, e
+                        a dominação pela força bruta: quem se rebelasse contra as ordens era punido fisicamente,
+                        torturado por cães treinados e levados até à morte.
+                    </p>
+                    <p>
+                        Ele apresenta uma série de metáforas que remetem ao período histórico em que a obra
+                        foi escrita. Além de remeter ao egoísmo, autoritarismo, corrupção que há em relações
+                        humanas, sejam elas políticas ou sociais, os personagens também lembram características
+                        de personagens históricos. Como, por exemplo, <strong>O Velho Major</strong> que apresenta semelhanças
+                        idealistas com Karl Max, ou então <strong>Napoleão</strong> que se assemelha com <strong>Stalin</strong>, a quem o autor
+                        paralelamente faz uma crítica, devido à administração corrupta. Assim, a obra de Orwell é
+                        considerada pela crítica uma fábula satírica, onde a realidade é retratada com um toque
+                        cômico.
+                    </p>
+                    <p class="fonte-imagem">
+                        <strong>Fonte</strong>: https://www.web.com/resumos/a-revolucao-dos-bichos-george-orwell. Adaptado por Valéria Silva Rosa de Almeida.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Resenha do Filme “Coringa” por Luiz Henrique Oliveira
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        A produção, dirigida e coescrita por <strong>Todd Philips</strong>, reimagina o personagem clássico da DC
+                        Comics, que já foi interpretado por <strong>Jack Nicholson</strong>, passando, claro, por <strong>Heath Ledger</strong>,
+                        detentor – até então – da melhor personificação do tortuoso Coringa, sem contar <strong>Cesar
+                        Romero</strong>, da TV.
+                    </p>
+                    <p>
+                        Agora, <strong>Joaquin Phoenix</strong> aparece roubando a cena, devorando o cenário e todos os outros
+                        atores à sua volta. Até mesmo veteranos como <strong>Robert De Niro</strong>, é eclipsado pela força
+                        de sua interpretação. Parecia impossível, mas Ledger perdeu a primazia de ser o melhor
+                        intérprete do palhaço até aqui.
+                    </p>
+                    <p>
+                        <strong>Arthur Fleck</strong> – este é o nome do personagem de <strong>Phoenix</strong>, já que o Coringa nunca teve um
+                        nome para chamar de seu até agora – trabalha como palhaço em uma Gothan City tomada
+                        por ratos e pela violência.
+                    </p>
+                    <p>
+                        Ele tem problemas psicológicos graves, não consegue se encontrar em um mundo cada
+                        vez mais perverso e sente-se como uma pessoa invisível, para quem a sociedade não dá
+                        a mínima. Ele vive miseravelmente em um apartamento pequeno e sujo, cuidando de sua
+                        mãe, com quem tem uma relação de dependência mútua.
+                    </p>
+                    <p>
+                        <strong>“Coringa”</strong> percorre a tempestade da mente de <strong>Arthur Fleck</strong> com precisão cirúrgica. O
+                        diretor <strong>Phillips</strong> mantém o controle visual da narrativa de forma exemplar, pois não há pontas
+                        soltas que façam com que o personagem saia do escopo cuidadosamente preparado para
+                        contar sua história. Vemos, cada vez mais embasbacados, os diversos problemas da vida
+                        miserável que <strong>Fleck</strong> leva.
+                    </p>
+                    <p>
+                        O cuidado com sua mãe doente. A única alegria em assistir ao talk show de <strong>Murray Frankin</strong>
+                        <strong>(Robert De Niro)</strong>. O trabalho onde é humilhado e incompreendido. O transtorno que faz
+                        com que ele dispare em risos mesmo quando está triste. Tudo isso faz com que nós, quando
+                        f
+                        inalmente ele chega ao seu limite, compreendamos seus motivos – mesmo que eles sejam
+                        irresponsáveis, inconsequentes. O resultado, como não poderia deixar de ser, é trágico. Em
+                        todos os sentidos.
+                    </p>
+                    <p>
+                        A tristeza da vida de <strong>Fleck</strong> é brilhantemente interpretada por <strong>Phoenix</strong>. O ator nasceu para
+                        este papel. Os menores trejeitos do sujeito parecem naturais, como se sempre estivessem ali.
+                        O andar torto com a cabeça meio caída para o lado é uma clara homenagem à interpretação
+                        de <strong>Heath Ledger</strong>, que definiu os parâmetros para o personagem em 2008. É, provavelmente,
+                        o melhor trabalho de um <strong>Phoenix</strong> que já entregou performances geniais como <strong>Johnny
+                        Cash</strong> em “Johnny e June”, o <strong>imperador</strong> em “Gladiador”.
+                    </p>
+                    <p>Luiz Henrique Oliveira</p>
+                    <p class="fonte-imagem">
+                        <strong>Fonte</strong>: http://www.mazeblog.com.br/coringa-resenha/ Adaptado por Valéria Silva Rosa de Almeida.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            A partir desses exemplos, um livro e um filme, percebe-se que uma RESENHA pode ser produzida a partir
+            de diferentes objetos (livros, filmes, peças teatrais, artigos) o que determina suas características textuais
+            e linguísticas – a linguagem empregada.
+        </p>
+        <p>
+            Podemos identificar o <strong>contexto de produção</strong>, tentando verificar como responder às seguintes questões:
+        </p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Quadro 1.</span> Contexto de produção</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743179411/jiivf7uujrptsjezlau6.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+            <!-- Fonte da imagem -->
+        </div>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </section>
+    <section class="outer-background">
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Compreenda a diversidade dos gêneros textuais!</strong><br><br>
+                Este vídeo apresenta os diferentes gêneros textuais e suas características,
+                fundamentais para a produção e interpretação de textos acadêmicos e profissionais.
+                Domine essa estrutura e melhore sua comunicação escrita!
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/Ucjv4LT8CSg?si=6Uzrm7_79E8cbNhg"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section class="secao2" id="secao22">
+        <h1>
+            2. A RESENHA ACADÊMICA
+        </h1>
+        <p>
+            A <strong>resenha</strong> é um <strong></strong>gênero textual bastante utilizado no meio acadêmico.
+        </p>
+        <p>
+            Para Andrade (1995, p.61), resenha é um tipo de trabalho que “exige conhecimento do assunto, para
+            estabelecer comparação com outras obras da mesma área e maturidade intelectual para avaliação e
+            emitir juízo de valor”. O juízo de valor ou julgamento de valor são os comentários e opiniões a respeito da
+            <strong>relevância</strong> da obra em questão.
+        </p>
+        <p>
+            Além dos objetivos gerais da resenha (instrumento de pesquisa bibliográfica, atualização bibliográfica,
+            decisão de consultar ou não o texto original), há, também, o desenvolvimento da capacidade de síntese
+            (resumo), interpretação e crítica. Ela <strong>contribui para desenvolver a mentalidade científica e levar o
+            iniciante à pesquisa e elaboração de trabalhos monográficos.</strong>
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <p class="textimg">
+                    A resenha pode ser descritiva, cientifica,
+                    técnica, sem nenhum julgamento ou
+                    apreciação do resenhador ou resenhista.
+                    A resenha pode ser também <strong>crítica,
+                    opinativa</strong>, pontuada de apreciações, notas e
+                    correlações, estabelecidas pelo juízo crítico
+                    de quem a elaborou. É <strong>julgar o valor do texto</strong>,
+                    a sua beleza, a sua <strong>relevância</strong>, a verdade
+                    das proposições (ideias) do autor, investigar
+                    a <strong>consistência</strong> de seus argumentos e a
+                    <strong>pertinência</strong> de suas conclusões. <strong>Responde
+                    basicamente à pergunta: O que o autor
+                    revela faz sentido?</strong>
+                </p>
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743180460/cmuhgcuvtnxsxal9ehpt.jpg"
+                        alt="Imagem representativa">
+                    <p class="fonte-imagem"><strong>Fonte:</strong> 123RF</p>
+                </div>
+            </div>
+            <br>
+            <p class="description"><strong>Descrição da imagem:</strong> A imagem retrata uma mulher de cabelos longos e escuros, usando óculos e uma camisa xadrez,
+            está sentada à mesa, estudando à noite. Ela apoia o rosto na mão enquanto olha para a tela do laptop, que está aberto
+            ao lado de um livro. A iluminação do ambiente vem de uma luminária de mesa, apresentada ao lado direito da imagem.
+            </p>
+        </div>
+        <p>
+            Vale ressaltar que <strong>esses julgamentos</strong> (de verdade ou de valor) <strong>devem ser sustentados por elementos
+            retirados do texto através de sua análise.</strong> É importante ter cuidado: não restrinja a resenha ao julgamento.
+            O julgamento do texto é apenas uma parte: lembre-se que toda resenha deve conter <strong>RESUMO e ANÁLISE DO
+            TEXTO</strong> que serve de ponto de partida. <strong>No meio acadêmico usa-se, preferencialmente, a resenha crítica.</strong>
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerv">
+                    Exemplo de Resenha Descritiva por Cássia Maria Buchalla
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentv">
+                    <p>
+                        O livro, <strong>Artigos Científicos: como redigir, publicar e avaliar</strong>, de autoria do prof. Maurício
+                        Gomes Pereira, tem como objetivo orientar os potenciais autores sobre como vencer as
+                        muitas barreiras na elaboração e publicação de artigos científicos. O livro aborda cada uma
+                        das etapas desse processo em 24 capítulos.
+                    </p>
+                    <p>
+                        Os três primeiros capítulos tratam dos aspectos da preparação do trabalho. O primeiro
+                        capítulo, <strong>Pesquisa e Comunicação Científica</strong> aborda, de modo geral, a evolução da
+                        comunicação científica nas ciências da saúde. No segundo capítulo, <strong>Canais de Comunicação
+                        Científica</strong>, o autor descreve os tipos de periódicos, de artigos, formas de publicação e
+                        as normas que as regem. <strong>Do terceiro ao décimo quinto capítulo</strong> é apresentada <strong>cada
+                        parte da estrutura de um trabalho científico</strong>, começando pelo planejamento, abordando
+                        a estrutura, redação e revisão do texto, a introdução, o método, os resultados, a discussão,
+                        as referências bibliográficas, o título, a autoria, o resumo, as palavras-chave, a escolha do
+                        periódico e um capítulo com temas para a complementação do artigo (capítulo 15).
+                    </p>
+                    <p>
+                        <strong>Outros três capítulos exploram a Estatística</strong> (capítulo 18), <strong>a Preparação de Tabelas</strong>
+                        (capítulo 19) e <strong>a Preparação de Figuras</strong> (capítulo 20). O leitor irá encontrar também
+                        capítulos sobre a <strong>Submissão do Artigo para a Publicação</strong>, sobre <strong>a Avaliação de Artigo
+                        Científico e sobre Ética</strong> (capítulo 21).
+                    </p>
+                    <p>
+                        Os <strong>três últimos capítulos</strong> do livro versam sobre <strong>temas auxiliares</strong>, enfocando a motivação
+                        para divulgar os resultados de uma pesquisa e os recursos para publicá-los. O capítulo 22,
+                        <strong>Vale a pena publicar Artigo Científico?</strong>, lista os motivos pelos quais esta prática é cada
+                        vez mais importante e competitiva assim como os auxílios disponíveis para uma escrita de
+                        qualidade.
+                    </p>
+                    <p>
+                        O livro termina com <strong>Síntese das Sugestões sobre Redação Científica</strong>, onde são agregadas
+                        as informações que resumem os demais capítulos do livro sobre temas relacionados a cada
+                        tópico. Desta forma, o livro pode ser útil para aqueles que querem um roteiro ou orientação
+                        para aprimorar seus manuscritos científicos e que têm dúvidas específicas, mas também
+                        para os iniciantes, que se beneficiarão ao ler um texto mais extenso, com um teor maior de
+                        informação sobre cada aspecto envolvido na produção científica.
+                    </p>
+                    <p class="fonte-imagem">
+                        O autor, Dr. Maurício Gomes Pereira, é médico com especialização em pediatria e em saúde pública e professor titular da
+                        universidade de Brasília.<br><br>
+                        http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-790X2012000200021
+                        Adaptado por Valéria Silva Rosa de Almeida.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Você pode perceber que a resenha acima descreve os pontos principais do livro, sem avaliá-lo, sem julgar a
+            relevância da obra aos leitores. Na parte final, há uma recomendação para os leitores interessados no tema.
+        </p>
+        <p>
+            A <strong>resenha crítica</strong> é mais que o resumo de uma obra. No texto, o autor faz uma avaliação sobre o livro, o
+            f
+            ilme ou qualquer outro conteúdo em questão. A ideia é ressaltar pontos positivos e negativos, de modo
+            que futuros consumidores possam decidir se querem – ou não – se aprofundar naquilo.
+        </p>
+        <p>
+            Dentro do contexto de produção, a resenha acadêmica tem um determinado objetivo, sempre o de avaliar
+            e/ou julgar a respeito do objeto de análise resenhado. Essa avaliação pode ser de valor apreciativo
+            (positivo) ou pejorativo (negativo).
+        </p>
+        <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            APRECIATIVO
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Quando o julgamento
+                            feito pelo resenhista
+                            destaca mais
+                            aspectos positivos,
+                            bons do que ruins.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            PEJORATIVO
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Quando o julgamento
+                            feito pelo resenhista
+                            destaca mais
+                            aspectos negativos,
+                            ruins do que bons.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            À <strong>resenha crítica</strong> inclui-se os textos que têm por objetivo conduzir o leitor para informações puras, afirma
+            Vanoye (1985 pp.74-75). Nesses textos, não se percebe nem a presença do emissor nem a do receptor.
+            Daí a <strong>linguagem em terceira pessoa, implicando certa intenção de quem escreve</strong>. Ela combina
+            resumo e julgamento de valor. Seu objetivo é oferecer informações para que o leitor possa decidir quanto
+            à consulta ou não do original. Daí a resenha dever resumir as ideias da obra, avaliar as informações nela
+            contidas, a forma como foram expostas e justificar a avaliação realizada.
+        </p>
+        <p>
+            É importante lembrar que a <strong>avaliação crítica</strong> não se limita a concordar ou discordar com o texto de
+            referência, mas cabe ao resenhista <strong>emitir sua opinião de forma consistente</strong>. Para tanto, é aconselhável
+            que este busque aprofundar seus conhecimentos, pesquisando sobre o autor da obra, relacionando-o
+            com suas outras produções (se houver) e mostrando suas contribuições no domínio em questão. Um
+            outro ponto importante: a resenha deve incorporar o <strong>resumo e a avaliação crítica</strong> de forma harmônica,
+            ou seja, o resenhista deve estabelecer um diálogo com a obra resenhada e seu autor.
+        </p>
+        <p>
+            A <strong>resenha</strong>, como qualquer modalidade de discurso, nunca pode ser exaustiva, apesar de infinitas as
+            propriedades e circunstâncias que envolvem o objeto descrito. O resenhista <strong>(você)</strong> deve proceder
+            <strong>seletivamente, filtrando</strong> apenas os aspectos pertinentes do objeto, isto é, apenas aquilo que é funcional
+            em vista de uma intenção previamente definida.
+        </p>
+        <p>
+            Imaginemos duas resenhas distintas sobre o mesmo objeto, o treinamento dos atletas para a copa
+            mundial de futebol: uma resenha destina-se aos leitores de uma coluna esportiva de um jornal; a outra,
+            ao departamento médico que integra a comissão de treinamento. O jornalista, na sua resenha, vai relatar
+            que um certo atleta marcou, durante o treino, um gol olímpico, fez duas coloridas jogadas de calcanhar,
+            encantou a plateia presente e deu vários autógrafos. Esses dados, na resenha destinada ao departamento
+            médico, são simplesmente desnecessários.
+        </p>
+        <p>
+            Enfim, a importância do que se vai relatar numa resenha depende da finalidade a que se presta e ao leitor
+            em questão.
+        </p>
+        <p>
+            Numa resenha de livros para o grande público leitor de jornal, por exemplo, não têm o menor sentido
+            descrever com pormenores os custos de cada etapa de produção do livro, o percentual de direito autoral
+            que caberá ao escritor e coisas desse tipo.
+        </p>
+        <p>
+            Leia a seguir um exemplo de uma resenha acadêmica crítica, publicada na Revista de Sociologia e Política.
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerv">
+                    TRABALHADORES E CIDADÃOS por Paulo Roberto Ribeiro Fontes
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentv">
+                    <p>
+                        <span class="text-italic">Edilson José Graciolli¹</span>
+                    </p>
+                    <p>
+                        O livro de Paulo Fontes - resultado da sua dissertação aprovada junto ao Programa de
+                        Mestrado em História Social do Trabalho, na UNICAMP – debruça-se sobre a história dos
+                        operários da Nitro Química, empresa construída no subúrbio paulistano de São Miguel a
+                        partir do final de 1935, cuja produção iniciou-se em setembro de 1937. Inserida na tentativa
+                        de compreender a dinâmica da industrialização no Brasil, a pesquisa elegeu essa unidade
+                        produtiva como espaço cotidiano e complexo da luta de classes onde, de um lado, a Nitro
+                        Química (uma espécie de “CSN do setor químico”) elaborou um sistema de dominação
+                        específico e, de outro, os trabalhadores construíram respostas próprias a ele, vivendo uma
+                        tensa e rica experiência, ora de resistência, ora de relativa integração àquele sistema.
+                    </p>
+                    <p>
+                        O recorte temporal (os anos cinquenta) justifica-se, segundo <span class="text-red">Paulo Fontes</span>, por ter sido esta,
+                        a década onde o modelo de dominação empresarial gestado nos anos antecedentes viveu
+                        o seu ápice e, também, o início do seu esgotamento, uma vez que a reciprocidade entre
+                        empresa e trabalhadores sofreu enormes desgastes, dado o avanço de uma identidade
+                        sociocultural própria entre os operários, em função da aguda atuação sindical e política nos
+                        anos anteriores a 1964. <strong>(RESUMO de introdução – contextualização)</strong>
+                    </p>
+                    <p>
+                        O trabalho se estrutura em cinco capítulos. No primeiro, apresenta-se uma análise do contexto
+                        que marcou a trajetória da empresa, desde a sua criação até o final dos anos cinquenta. <span class="text-blue">Tal
+                        análise permite, de maneira adequada e esclarecedora</span> ao leitor a intelecção de aspectos,
+                        como por exemplo, as relações de cumplicidade havidas entre o governo de Getúlio Vargas
+                        e os proprietários da Nitro Química (José Ermírio de Moraes e Horácio Lafer), ou ainda o
+                        lugar que a Segunda Guerra desempenhou no crescimento econômico da empresa.
+                    </p>
+                    <p>
+                        No segundo capítulo, <span class="text-blue">não menos preciso e interessante</span>, o <span class="text-red">autor</span> <span class="text-greenv">aborda</span> a implicação
+                        do elemento de dominação que era imediata: ser parte da família nitrina significava atender
+                        aos interesses da nação e, consequentemente, fazer greves ou outros movimentos
+                        reivindicatórios seria contrapor-se a tais interesses. No terceiro capítulo, <span class="text-red">o sociólogo</span> o
+                        <span class="text-greenv">esclarece</span> <span class="text-blue">de maneira concisa e objetiva</span>, o patriotismo visado o qual não dava margem a
+                        qualquer confusão com o “falso” nacionalismo dos comunistas, pois desde cedo a empresa
+                        se preocupou em combater o comunismo. E o fez com base em mais dois mecanismos
+                        centrais: o espírito pioneiro e desbravador dos “pais” da família nitrina e a constante procura
+                        de um capitalismo sadio, humano e progressista.
+                    </p>
+                    <p>
+                        O capítulo 4, <span class="text-blue">de fundamental importância</span>, <span class="text-red">ele</span> <span class="text-greenv">dedica-se</span> ao estudo da organização
+                        sindical dos operários da Nitro Química e das suas relações com o Partido Comunista, cuja
+                        militância em São Miguel Paulista era destacada, tanto no âmbito sindical quanto em outros
+                        aspectos da vida cultural e social do bairro (como, por exemplo, na organização de festas,
+                        bailes, apresentações teatrais, excursões e palestras).
+                    </p>
+                    <p>
+                        <span class="text-red">Fontes</span> <span class="text-greenv">apresenta</span> <span class="text-blue">um fiel relato</span> das razões pelas quais os trabalhadores olhavam com
+                        muita desconfiança para o Sindicato, uma vez que este atrelava-se à política da empresa.
+                        Em meio a essa discussão, <span class="text-red">o autor</span> <span class="text-greenv">analisa</span> o significado do assistencialismo para os
+                        trabalhadores e conclui que este não pode ser visto apenas como um reforço à tutela do
+                        Estado sobre sindicatos. <span class="text-blue">Aqui me parece manifestar-se uma das lacunas deste que é
+                        um bom e pertinente trabalho relacionado aos trabalhadores em cidadãos em uma
+                        empresa.</span> <strong>(Julgamento negativo)</strong>
+                    </p>
+                    <p>
+                        O último capítulo, <span class="text-red">Paulo Fontes</span> <span class="text-greenv">identifica</span> <span class="text-blue">aspectos importantes e específicos, embora
+                        com certa dose um pouco exagerada de detalhes</span> <strong>(Julgamento negativo)</strong>, a greve dos
+                        trabalhadores da Nitro Química acontecida de 24 a 31 de outubro de 1957, a mais longa
+                        da sua história até então. Uma nova diretoria no Sindicato dos Químicos, empossada em
+                        novembro de 1956, apresentava uma linha de ação bem diferenciada do que até aquele
+                        momento se verificava na entidade. Ao invés de contratos por empresa, essa diretoria
+                        buscava firmar tratos com os sindicatos patronais. A proeminência do setor jurídico deu lugar
+                        ao investimento na participação dos trabalhadores, inclusive com a escolha de delegados
+                        sindicais.
+                    </p>
+                    <p>
+                        A greve na Nitro Química iniciou-se no mesmo dia em que a famosa greve dos 400 mil
+                        trabalhadores chegou ao final. Nesta, seis categorias obtiveram importantes conquistas
+                        econômicas e impuseram uma vitória no embate com os respectivos segmentos do
+                        empresariado. Neste contexto é que, segundo Paulo Fontes, pode entender o movimento
+                        grevista dos operários da Nitro que, após oito dias de confronto com o aparelho repressivo
+                        do Estado e a intransigência patronal, revelou-se vitoriosa, pois a empresa concordou com
+                        a reivindicação central (20% de reajuste sobre os salários vigentes em agosto de 1956),
+                        além de não punir os grevistas.
+                    </p>
+                    <p>
+                        <strong>Além de ser resultado de uma acurada pesquisa</strong> sobre as manifestações cotidianas
+                        daquele segmento da classe trabalhadora nos anos cinquenta, <strong>o livro de</strong> <span class="text-red">Paulo Fontes</span>
+                        <span class="text-greenv">aponta</span> <strong>aspectos fundamentais</strong> da possibilidade de uma ação ofensiva por parte dos
+                        trabalhadores. [...] Porém, teriam, efetivamente, os trabalhadores da Nitro experimentado a
+                        greve de outubro de 1957 fundamentalmente em função de uma intensa organização interna
+                        à empresa? <span class="text-blue">No entanto, esta é uma das principais conclusões polêmicas</span> <strong>(Julgamento
+                        negativo)</strong> que <span class="text-red">Fontes</span> <span class="text-greenv">apresenta</span> em relação ao que outros autores (notadamente Leôncio
+                        Martins Rodrigues e Armando Soito Jr.) sustentam a respeito, uma vez que, para estes
+                        autores, praticamente inexiste, no período, organização sindical nos locais de trabalho.
+                        [...] da estrutura sindical oficial e o seu efeito moderador nas lutas reivindicatórias dos
+                        trabalhadores.
+                    </p>
+                    <p>
+                        Desde o título do livro presume-se que a questão da cidadania <span class="text-blue">merecerá atenção detalhista</span>.
+                        De fato, em alguns momentos isto se dá, como no trecho seguinte: “O desrespeito da
+                        companhia aos direitos adquiridos pelos trabalhadores nas leis do País eram outro foco de
+                        grande insatisfação. A Nitro redefinia o que era direito do trabalhador no âmbito de seu espaço
+                        (p. 163)”. <span class="text-blue">Todavia, no trabalho não se qualifica “cidadania” com especificidade. Esta
+                        ausência dificulta, inclusive, a percepção do projeto de cidadania que, eventualmente,
+                        aqueles trabalhadores</span> <strong>(Julgamento negativo)</strong> possuíam, se é que essa questão (a luta
+                        por uma extensão dos direitos) realmente tenha ocupado o centro das suas mobilizações.
+                    </p>
+                    <p>
+                        Pelo exame dos documentos, entrevistas e outras fontes citadas no livro, <span class="text-blue">percebe-se com
+                        clareza e objetividade</span>, que o eixo da própria greve de 1957 foi o combate ao arrocho salarial,
+                        ou seja, a rejeição à superexploração da força de trabalho, remunerada aquém do seu próprio
+                        valor de troca. Naquele momento, tais trabalhadores teriam articulado suas reivindicações
+                        mais imediatas ao menos a um projeto de reformas sociais? A identidade que construíram
+                        permaneceu no momento econômico-corporativo, estendeu-se minimamente a outros
+                        segmentos da classe trabalhadora ou, ainda, tangenciou a necessidade desta diferenciar
+                        se com vistas à luta pela hegemonia? O enfrentamento destas indagações <span class="text-blue">permitiria
+                        vislumbrar, de maneira abrangente</span>, os contornos do que o autor está entendendo por
+                        cidadania e, mais que isto, verificar em que medida aquelas lutas operárias se expressaram
+                        também nessa dimensão.
+                    </p>
+                    <p>
+                        Essas observações <span class="text-blue">em nada diminuem o vigor do livro. O exaustivo trabalho de pesquisa
+                        empreendida</span>, com as experiências de resistência dos operários da Nitro Química, que <span class="text-red">Paulo
+                        Fontes</span> <span class="text-greenv">conclui</span> e em que se percebe <span class="text-blue">sua constante preocupação, credenciam-no como
+                        leitura obrigatória aos que se interessam pelo mundo do trabalho, quer pelo ofício de
+                        pesquisador, quer pela militância sindical ou, ainda, pela absoluta necessidade de se
+                        compreender a realidade brasileira.</span> <strong>(RECOMENDAÇÃO)</strong>
+                    </p>
+                    <p class="fonte-acordeon">
+                        Recebido para publicação em março de 1998.<br><br>
+                        Edílson José Graciolli (ejgmz@triang.com.br) é Mestre em Sociologia pela Universidade Estadual de Campinas (UNICAMP) e
+                        Professor da Universidade Federal de Uberlândia (UFU).<br><br>
+                        <strong>Referências</strong><br><br>
+                        BOITO Jr., A. O sindicalismo de Estado no Brasil. Campinas:Hucitec, 1991.<br><br>
+                        RODRIGUES, L. M. Conflito industrial e sindicalismo no Brasil. São Paulo: Difel, 1966.<br><br>
+                        http://www.revistasociologiaepolitica.org.br.<br><br>
+                        <strong>Adaptado por Valéria Silva Rosa de Almeida.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Você deve ter percebido que, ao comparar as resenhas lidas anteriormente, a <strong>resenha acadêmica</strong>
+            contextualiza o leitor sobre a obra resenhada de modo diferente, pois há referências à obra resenhada
+            feita nas normas da ABNT. Em negrito e de cor azul, demonstrei os julgamentos de valor positivos e
+            negativos, que Edison José Gracioli, o resenhista, comenta.
+        </p>
+        <p>
+            Concluindo, o objetivo centra-se no julgamento de valor da obra, ou seja, na apreciação de seus aspectos
+            estéticos, na qualidade de sua produção e apresentação e de sua relevância, permitindo ao leitor se
+            interessar ou não pelo tema abordado no livro de Paulo Fontes, pois esse é um dos objetivos da resenha.
+        </p>
+        <p>
+            Em linhas gerais, a <strong>resenha acadêmica</strong> possui várias semelhanças com a resenha de filmes ou livros que
+            apresentam assuntos mais cotidianos, porém com algumas particularidades em sua estrutura e linguagem.
+        </p>
+        <h1 id="secao3">
+            3. ESTRUTURA DA RESENHA ACADÊMICA
+        </h1>
+        <div class="small-frameg">
+            <p>
+                O livro de Paulo Fontes - resultado da sua dissertação aprovada junto ao Programa de
+                Mestrado em História Social do Trabalho, na UNICAMP – debruça-se sobre a história
+                dos operários da Nitro Química, empresa construída no subúrbio paulistano de São
+                Miguel a partir do final de 1935, cuja produção iniciou-se em setembro de 1937.
+            </p>
+        </div>
+        <h1>
+            3.1 ORGANIZAÇÃO DA OBRA
+        </h1>
+        <p>
+            O autor da obra se preocupa em como o livro está organizado, deixando claro
+        </p>
+        <div class="small-frameg">
+            <p>
+                a) Quantos capítulos a obra tem; b) qual o tema abordado em cada capítulo.<br>
+                O trabalho se estrutura em cinco capítulos. No primeiro...... No segundo capítulo, ....<br>
+                O capítulo 4, de fundamental importância..... O último capítulo analisa.....
+            </p>
+        </div>
+        <p>
+            Portanto, conclui-se que uma resenha mantém a abordagem do tema de forma linear à obra resumida, ou
+            seja, explora os aspectos temáticos da maneira que aparecem no texto original.
+        </p>
+        <h1 id="secao4">
+            4. RETOMADA DAS INFORMAÇÕES PRINCIPAIS
+        </h1>
+        <p>
+            A <strong>resenha</strong> como é um texto inspirado em outro (texto original de um livro, artigo etc), deve manter fidelidade
+            às principais informações lidas no original, como:
+        </p>
+        <div class="small-frameg">
+            <p>
+                1) O assunto abordado em cada capítulo se for um livro. Se for um artigo, nas
+                informações elencadas.<br>
+                2) A tese que o autor defende.<br>
+                3) Os argumentos produzidos pelo autor a fim de defender a tese.<br>
+                4) As considerações do autor sobre o tema.
+            </p>
+        </div>
+        <p>
+            Vale ressaltar que para se conseguir ser fiel à obra original, o resenhista necessita compreendê-la,
+            atribuindo a ela uma interpretação mais objetiva e concreta. Além disso, o resenhista deve fazer o
+            julgamento da obra por meio de uma linguagem específica.
+        </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Aprenda a produzir resenhas com qualidade acadêmica!</strong><br><br>
+                A resenha é um gênero essencial na vida universitária. Neste vídeo, você conhecerá
+                sua estrutura, funções e como elaborar uma resenha crítica de forma objetiva e bem
+                fundamentada.
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/qMYEuyb17qU?si=B5PMKTyRJDYdaBHt"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="secao1" id="secao5">
+        <h1>
+            5. A LINGUAGEM
+        </h1>
+        <p>
+            A linguagem desempenha um papel fundamental, tanto na construção do julgamento sobre a obra quanto
+            na correta atribuição de voz ao autor original. Esse cuidado garante que a resenha seja objetiva, respeitosa
+            e coerente, evitando interpretações equivocadas ou avaliações imprecisas.
+        </p>
+        <h1>
+            5.1 LINGUAGEM NA CONSTRUÇÃO DA AVALIAÇÃO/JULGAMENTO
+        </h1>
+        <p>
+            Como você percebeu, nos trechos <span class="text-blue">destacados em negrito e de cor azul</span>, o resenhista julgou e avaliou
+            a relevância do livro de Paulo Fontes. Eles são responsáveis, portanto, por emitir a opinião/o julgamento/
+            avaliação da obra. O resenhista apontou aspectos positivos e negativos em uma linguagem específica
+            a uma <span class="text-red">resenha acadêmica</span> e também pela sua formação como resenhista. Os <strong>comentários negativos</strong>
+            apresentaram uma <strong>linguagem respeitosa, sem parecer prepotente,</strong> usando de adjetivos e advérbios,
+            cuidadosamente escolhidos, responsáveis pela construção da avaliação. É esse o caminho correto.
+        </p>
+        <h1>
+            5.2 LINGUAGEM NA MENÇÃO, ATRIBUIÇÃO DE VOZ E ATOS DO AUTOR
+        </h1>
+        <p>
+            Você precisa saber que ao produzirmos uma resenha acadêmica, devemos retomar as ideias principais
+            do autor da obra original para não corrermos o risco de assumi-la como se fosse de nossa produção.
+        </p>
+        <p><strong>Lembre-se, no entanto, que esse processo é também usado em RESUMOS.</strong></p>
+        <p>
+            Verifique nas palavras destacadas, em <span class="text-orange">negrito e de cor laranja,</span> como essas palavras, que <span class="text-orange">mencionam
+            o autor do livro de diversas formas</span>, têm o objetivo de deixar claro que a afirmação dita na sequência é
+            a “voz” do autor da obra e não do resenhista.
+        </p>
+        <div class="small-frame">
+            <p>
+                O autor; o sociólogo; ele; Paulo Fontes; Fontes
+            </p>
+        </div>
+        <p>
+            Além disso, o resenhista <span class="text-greenv">faz usos de certos verbos</span> (atos) em <span class="text-greenv">negrito e de cor verde</span>, responsáveis por
+            indicar a postura do autor da obra. Os verbos podem ser diferentes e denotam ações mais específicas.
+        </p>
+        <p>
+            Portanto, é importante que você fique atento na escolha deles, isto é, devem ser coerentes com o sentido
+            pretendido e só será definido pelo contexto em que ele aparece! Por exemplo, fica incoerente usar o verbo
+            “defende” quando o autor “esclarece” algo. Outros verbos para indicar os atos do autor.
+        </p>
+        <div class="small-frame">
+            <p>
+                Afirma; analisa; apresenta; contesta; conclui; critica; defende; esclarece; inicia; indica; retoma.
+            </p>
+        </div>
+        <p>
+            A partir de todos os exemplos acima, pode-se perceber que uma <span class="text-red">resenha acadêmica</span> pode ser produzida
+            a partir de <strong>diferentes objetos</strong> – um livro, um filme, uma reportagem, um artigo científico, um artigo
+            de opinião dentre outros – o que determina o seu contexto de produção e, naturalmente, a linguagem
+            empregada – científica, coloquial, acadêmica, técnica.
+        </p>
+        <p>
+            Mais uma vez, esclareço, como fiz no gênero textual RESUMO que, não há fórmulas mágicas, macetes
+            ou receitas prontas sobre como fazer uma <span class="text-red">resenha acadêmica</span>. Como todos os outros tipos de texto,
+            aprendemos por experiência e erro, treinando, fazendo. Serão muitos exercícios de resenha até você
+            conseguir produzir boas resenhas, e o importante é não desanimar nesse trajeto. Para aqueles que,
+            apesar de tudo o que leram, ainda não sabem por onde começar, fique atento ao quadro a seguir que
+            apresenta algumas etapas importantes.
+        </p>
+        <!-- Quadro com borda violeta -->
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743189869/irkbijwhekctztzvmzcu.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+        </div>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+        <p>
+            Faça essas etapas, antes de começar a redigir o texto. Faça um <strong>rascunho</strong>; ele é necessário <strong>OU</strong>, se for
+            um artigo, imprima-o e faça nele mesmo. Apenas depois de resolvido essas etapas, você estará pronto
+            para escrever o texto e decidir sobre a sua organização.
+        </p>
+        <p>
+            Depois de <strong>contextualizá-lo</strong>, você pode começar sua resenha já emitindo seu julgamento de valor (Verifique
+            o exemplo do texto de Paulo Fontes) <span class="text-red">OU</span> você pode produzir o resumo e fazer a avaliação em seguida,
+            terminando por uma apreciação mais genérica do texto original. Em ambos os casos <strong>NÃO SE ESQUEÇA
+            DA ARGUMENTAÇÃO</strong>. É você quem decide <span class="text-red">OU</span> verifique se seu professor tenha as orientações dele.
+            O importante é que seu texto tenha organização e unidade. Enfim, que não seja apenas um amontoado
+            de parágrafos sobre o texto que está sendo resenhado, sem nenhuma coesão e coerência. <strong>Portanto, é
+            imprescindível usar os ORGANIZADORES TEXTUAIS</strong><br><br>
+            Em seguida, acrescentarei alguns passos para a produção de sua <strong>resenha acadêmica</strong>.
+        </p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>1.</strong> Dê um título à sua resenha. Não o copie do texto original. <strong>Crie-o.</strong>
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>2.</strong> Coloque seu nome abaixo do título à direita e, em <strong>nota de rodapé</strong>, suas credenciais (Graduando do Curso de ...... da
+                        Universidade São Francisco, Campus .......)
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>3.</strong> Apresente as referências da obra a ser resenhada pela ABNT e as credenciais do autor da obra original (profissão,
+                        instituição ao qual está vinculado, livros já publicados, prêmios recebidos (se houver).
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>4.</strong> Contextualize o leitor acerca da estrutura da obra. (Capítulos, quando livros e apresente uma descrição deles.)
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>5.</strong> Apresente a avaliação da obra. (Como vimos, pode ser feita na conclusão <strong>OU</strong> durante a descrição dos capítulos.)
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>6.</strong> Recomende a obra. (Apresente-a para quem a obra pode ser indicada. Você pode também não recomendá-la, mas justificando
+                        sua conduta.)
+                    </span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+        <h1 id="secao6">
+            6. SINTETIZANDO
+        </h1>
+        <p>
+            A resenha crítica é um gênero textual que, além de descrever os aspectos principais de uma obra, inclui
+            apreciações, avaliações, julgamentos de valor e observações fundamentadas pelo juízo crítico. Para
+            elaborar uma boa resenha crítica, é fundamental redigir em uma linguagem clara, objetiva e impessoal,
+            utilizando a terceira pessoa do singular.
+        </p>
+        <p>
+            Deve-se evitar a cópia literal do texto original, priorizando a seleção e a exposição dos aspectos mais
+            relevantes da obra. É importante também considerar a finalidade do texto e o público-alvo, ajustando o
+            conteúdo e a abordagem de acordo com o tipo de leitor.
+        </p>
+        <p>
+            Um dos objetivos centrais da resenha crítica é apresentar um juízo valorativo, com críticas fundamentadas e
+            bem embasadas, evitando opiniões subjetivas e infundadas. Além disso, a resenha deve ser compreensível
+            por si só, dispensando a necessidade de consulta ao texto original, uma vez que ela auxilia o leitor a
+            decidir se irá ou não se aprofundar na obra.
+        </p>
+        <p>
+            Por fim, é imprescindível respeitar a norma-padrão da Língua Portuguesa vigente, garantindo um texto
+            coeso e correto do ponto de vista gramatical.
+        </p>
+    </section>
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    <strong>Entenda as diferenças entre resenha, resumo e crítica!</strong><br><br>
+                    Saiba como diferenciar e produzir esses três gêneros textuais, cada um com sua
+                    função e aplicabilidade na academia e no mercado profissional.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/GvZgUJM_E9U?si=LO3dPnwc5m8vmG_U"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    A resenha acadêmica é uma ferramenta essencial para o desenvolvimento do pensamento crítico e da
+                    capacidade de argumentação. Ao apresentar uma análise detalhada e juízos de valor fundamentados,
+                    ela permite que o autor demonstre não apenas o domínio do conteúdo, mas também sua capacidade de
+                    avaliar e contextualizar a obra em diferentes perspectivas.
+                </p>
+                <p>
+                    Ao longo desta unidade, foram exploradas as especificidades desse gênero textual, incluindo a estrutura,
+                    a linguagem e as técnicas de análise. A prática contínua é indispensável para alcançar a excelência na
+                    produção de resenhas, tornando esse exercício uma oportunidade valiosa para aprofundar o conhecimento
+                    e refinar habilidades acadêmicas.
+                </p>
+    
+            </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                <p>
+                    ANDRADE, M.M de. Como elaborar trabalhos: <strong>Noções Práticas</strong>. São Paulo: Atlas, 1995.
+                </p>
+                <p>
+                    BAKHTIN, M.M. <strong>Os gêneros do discurso</strong>. Tradução Paulo Bezerra. São Paulo: Martins Fontes, 2003.
+                </p>
+                <p>
+                    KONDER, L. <strong>A Dialética e o Marxismo</strong>. Revista: Trabalho Necessário. V1; n.1, 2003.
+                </p>
+                <p>
+                    MACHADO, Anna Rachel; LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. <strong>Resenha</strong>. São Paulo
+                    Editorial, 2004.
+                </p>
+                <p>
+                    MEDEIROS, João Bosco. <strong>Redação científica</strong>. São Paulo: Editora Atlas, 2008.
+                </p>
+                <p>
+                    VANOYE, 1985 pp.74-75. IN MEDEIROS, João Bosco. <strong>Redação Científica</strong>.4.ed.São Paulo: Atlas, 2008.
+                    https://educacao.uol.com.br/disciplinas/portugues/resenha-como-fazer-a-avaliacao-critica-de-uma-obra.
+                    htm?cmpid=copiaecola
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                } else {
+                    navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                }
+            });
+        let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            function updateSlider() {
+                const slider = document.querySelector('.slider');
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+
+            // Opcional: permite navegar com as setas do teclado
+            document.addEventListener('keydown', function (e) {
+                if (e.key === "ArrowRight") nextSlide();
+                if (e.key === "ArrowLeft") prevSlide();
+            });
+        document.querySelectorAll(".tab-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    let tabsContainer = document.querySelector(".tabs-content");
+
+                    // Verifica se alguma aba está ativa
+                    let isAnyTabActive = document.querySelector(".tab-content.active");
+
+                    // Se clicar na aba já aberta, fecha tudo
+                    if (isAnyTabActive && document.getElementById(this.dataset.tab).classList.contains("active")) {
+                        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+                        tabsContainer.style.display = "none";
+                        return;
+                    }
+
+                    // Ativar a exibição das abas
+                    tabsContainer.style.display = "block";
+
+                    // Remove a classe "active" de todas as abas e botões
+                    document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                    document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+                    // Ativa o botão e a aba correspondente
+                    this.classList.add("active");
+                    document.getElementById(this.dataset.tab).classList.add("active");
+                });
+            });
+            document.querySelectorAll('.acordeon-header, .acordeon-headerv').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const isVisible = content.style.display === 'block';
+                        content.style.display = isVisible ? 'none' : 'block';
+                        const icon = header.querySelector('.acordeon-icon');
+                        if (icon) {
+                            icon.classList.toggle('bx-chevron-up', !isVisible);
+                            icon.classList.toggle('bx-chevron-down', isVisible);
+                        }
+                    });
+                });
+                // Função para abrir o modal com o vídeo
+                    function openVideoModal(element) {
+                        var videoModal = document.getElementById('videoModal');
+                        var iframe = document.getElementById('videoIframe');
+
+                        // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                        var videoLink = element.getAttribute("data-video");
+
+                        // Define o src do iframe com o link do vídeo
+                        iframe.src = videoLink;
+
+                        // Exibe o modal
+                        videoModal.style.display = "flex";
+                    }
+
+                    // Função para fechar o modal
+                    function closeVideoModal() {
+                        var videoModal = document.getElementById('videoModal');
+                        var iframe = document.getElementById('videoIframe');
+
+                        // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                        iframe.src = "";
+                        videoModal.style.display = "none";  // Fecha o modal
+                    }
+
+                    // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                    document.getElementById('videoModal').addEventListener('click', function (event) {
+                        // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                        if (event.target === this) {
+                            closeVideoModal();
+                        }
+                    });
+                 // Abrir modal ao clicar na imagem
+                    function openModal(imgElement) {
+                        let modal = document.getElementById("imageModal");
+                        let modalImg = document.getElementById("modalImg");
+
+                        modal.style.display = "flex";
+                        modalImg.src = imgElement.src;
+                    }
+
+                    // Fechar modal ao clicar no fundo ou no botão "X"
+                    function closeModal() {
+                        document.getElementById("imageModal").style.display = "none";
+                    }
+                      
+    </script>
+</body>
+</html>

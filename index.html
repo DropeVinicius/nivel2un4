@@ -447,6 +447,7 @@
             font-family: 'Roboto', sans-serif;
             color: #333; /* Verde */
             margin-top: 50px;
+            font-weight: normal; /* Evita que o título fique em negrito */
         }
 
         /* Imagem dentro do quadro */
@@ -543,6 +544,7 @@
         }
         .text-green{
             color: #015A42;
+            font-weight: inherit;
         }
         .text-greenv{
             color: #015A42;
@@ -702,7 +704,13 @@
             margin: 20px auto; /* Centraliza e ajusta margem superior */
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
         }
-
+        .divisor {
+            border: none;
+            border-top: 2px solid #015A42; /* Cor igual à borda do contêiner */
+            width: 100%;
+            margin: 10px auto; /* Centraliza o divisor */
+            opacity: 0.7; /* Torna a linha um pouco mais suave */
+        }
         .small-frameg p {
             font-size: 15px;
             font-family: 'Roboto', sans-serif;
@@ -1825,7 +1833,7 @@
             específicas, formais e de conteúdo. Verifique no quadro abaixo alguns exemplos.
         </p>
         <!-- Quadro com borda violeta -->
-        <h2 class="titulo-quadrov"><span class="text-green">Quadro 1.</span> Esferas de circulação</h2>
+        <h2 class="titulo-quadrov"><span class="text-greenv">Quadro 1.</span> Esferas de circulação</h2>
         <div class="quadrov">
             <!-- Imagem via link -->
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742995317/uircguvrqoeqq68lzgkl.png"
@@ -2110,7 +2118,7 @@
             Podemos identificar o <strong>contexto de produção</strong>, tentando verificar como responder às seguintes questões:
         </p>
         <!-- Quadro com borda violeta -->
-        <h2 class="titulo-quadrov"><span class="text-green">Quadro 2.</span> Contexto de produção</h2>
+        <h2 class="titulo-quadrov"><span class="text-greenv">Quadro 2.</span> Contexto de produção</h2>
         <div class="quadrov">
             <!-- Imagem via link -->
             <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743179411/jiivf7uujrptsjezlau6.png"
@@ -2543,12 +2551,13 @@
         </p>
         <div class="small-frameg">
             <p>
-                a) Quantos capítulos a obra tem;<br>
+                <strong>a) Quantos capítulos a obra tem;</strong><br>
                 O trabalho se estrutura em cinco capítulos. <br>
                 O capítulo 4, de fundamental importância..... 
             </p>
+            <hr class="divisor">
             <p>
-                b) qual o tema abordado em cada capítulo.<br>
+                <strong>b) qual o tema abordado em cada capítulo.</strong><br>
                 No primeiro...... No segundo capítulo, ....<br>
                 O último capítulo analisa.....
             </p>
